@@ -1,0 +1,428 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import packages from '../data/packages.json';
+---
+
+<!doctype html>
+<html lang="id">
+	<head>
+		<BaseHead title="MHU Travel Umroh 2026 | Jadwal Lengkap & Harga Terbaik" description="Travel Umroh Resmi MHU - Akreditasi A Jadwal Umroh 2026 lengkap + harga mulai 20 jutaan." />
+	</head>
+	<body class="font-sans text-gray-800 antialiased bg-white">
+		<!-- Header / Navbar -->
+		<header class="w-full bg-white shadow-sm z-50 sticky top-0">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="flex justify-between items-center h-24">
+					<div class="flex items-center">
+						<a href="/" class="flex-shrink-0 flex items-center gap-2">
+							<img src="https://manasikhajiumrah.net/wp-content/uploads/2025/08/cropped-logo-1-300x86-1-1.png" alt="MHU Travel Logo" class="h-12 w-auto" onerror="this.onerror=null; this.src='https://via.placeholder.com/150x50?text=MHU+Travel';">
+						</a>
+					</div>
+					<nav class="hidden md:flex space-x-8 items-center">
+						<a href="/" class="text-[#c15b74] font-medium hover:text-[#a0455d] transition-colors">Beranda</a>
+						<div class="relative group">
+							<a href="#paket" class="text-[#c15b74] font-medium hover:text-[#a0455d] transition-colors flex items-center">Paket Umroh <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></a>
+						</div>
+						<a href="/jadwal" class="text-[#c15b74] font-medium hover:text-[#a0455d] transition-colors">Update Seat</a>
+						<a href="/blog" class="text-[#c15b74] font-medium hover:text-[#a0455d] transition-colors">Blog</a>
+						
+						<a href="https://wa.me/6285956129389" class="text-[#c15b74] font-medium flex items-center gap-2 hover:text-[#a0455d] transition-colors">
+							<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+							0859-5612-9389
+						</a>
+					</nav>
+				</div>
+			</div>
+		</header>
+
+		<!-- Hero Section -->
+		<section class="py-16 bg-[#f7f9fb] text-center px-4">
+			<div class="max-w-4xl mx-auto">
+				<h1 class="text-3xl md:text-4xl font-normal text-[#c15b74] mb-4">
+					Travel Umroh Resmi & Terpercaya MHU Travel
+				</h1>
+				<h2 class="text-xl md:text-2xl font-bold text-gray-900 mb-6">
+					Agen Travel Umroh Resmi Terpercaya Akreditasi A<br/>
+					PT Manasik Haji Umrah
+				</h2>
+				<p class="text-lg text-gray-700 leading-relaxed mb-8">
+					Setiap langkah menuju Tanah Suci adalah panggilan suci. Di tengah kerinduan mendalam akan<br class="hidden md:block"/>
+					Baitullah, MHU Travel (PT Manasik Haji Umrah) hadir sebagai mitra terpercaya Anda.<br class="hidden md:block"/>
+					Dengan pengalaman lebih dari 10 tahun di bidang haji dan umrah, kami siap mewujudkan<br class="hidden md:block"/>
+					perjalanan spiritual Anda menjadi kenyataan yang nyaman, aman, dan penuh makna
+				</p>
+				<a href="#paket" class="inline-block bg-[#c15b74] text-white px-8 py-3 rounded-md font-bold text-sm tracking-wider hover:bg-[#a0455d] transition-colors mb-10">
+					<svg class="w-4 h-4 inline-block mr-2 -mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9.5a2.5 2.5 0 00-2.5-2.5H15"></path></svg>
+					LIHAT DETAIL PAKET UMROH LENGKAP KAMI
+				</a>
+				
+				<div class="flex justify-center mb-6">
+					<img src="https://manasikhajiumrah.net/wp-content/uploads/2024/01/banner-ppiu-kan-1024x171.png" alt="Sertifikasi" class="max-h-20 object-contain" onerror="this.style.display='none';">
+				</div>
+			</div>
+		</section>
+
+		<!-- Pink Box Section -->
+		<section class="py-12 bg-white px-4">
+			<div class="max-w-5xl mx-auto bg-[#fdebf0] rounded-lg p-8 md:p-12 text-center">
+				<h3 class="text-2xl font-bold text-[#c15b74] mb-4">PT Manasik Haji Umrah (MHU Travel)</h3>
+				<p class="text-gray-800 text-sm mb-8 max-w-4xl mx-auto leading-relaxed">
+					Kami Memahami Bahwa Ibadah Umroh Adalah Perjalanan Hati Yang Membutuhkan Ketenangan Dan Kepercayaan Penuh. <strong>MHU Travel</strong> Berkomitmen Untuk Menghadirkan Pengalaman Spiritual Terbaik Dengan Berbagai Keunggulan Yang Menjamin Kedamaian Perjalanan Anda
+				</p>
+				
+				<ul class="text-left space-y-4 max-w-2xl mx-auto mb-8 text-gray-800 text-sm">
+					<li class="flex items-start">
+						<svg class="w-5 h-5 text-[#c15b74] mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+						<span>Legalitas Dan Kepercayaan Terjamin Penuh</span>
+					</li>
+					<li class="flex items-start">
+						<svg class="w-5 h-5 text-[#c15b74] mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+						<span>Program Pembayaran Fleksibel Dan Syariah Friendly</span>
+					</li>
+					<li class="flex items-start">
+						<svg class="w-5 h-5 text-[#c15b74] mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+						<span>Paket Lengkap Dan Pelayanan Profesional Prima</span>
+					</li>
+					<li class="flex items-start">
+						<svg class="w-5 h-5 text-[#c15b74] mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+						<span>Harga Kompetitif Dengan Kualitas Maksimal</span>
+					</li>
+					<li class="flex items-start">
+						<svg class="w-5 h-5 text-[#c15b74] mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+						<span>Fokus Penuh Pada Kenyamanan Dan Kepuasan Jamaah</span>
+					</li>
+					<li class="flex items-start">
+						<svg class="w-5 h-5 text-[#c15b74] mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+						<span>Pelopor Umroh COD: Berangkat Umroh Dulu Bayar Setelah Pulang</span>
+					</li>
+				</ul>
+				
+				<p class="text-gray-800 text-sm mb-8">
+					Bayangkan momen itu: Kaki Anda melangkah di Tanah Suci, pandangan pertama keagungan Ka'bah, air mata syukur<br class="hidden md:block"/> menetes tak terbendung. MHU Travel hadir untuk mewujudkan kerinduan mendalam itu
+				</p>
+				
+				<a href="https://wa.me/6285956129389" class="inline-block bg-[#c15b74] text-white px-6 py-3 rounded text-sm font-bold hover:bg-[#a0455d] transition-colors">
+					WUJUDKAN IMPIAN UMROH ANDA: KONSULTASI GRATIS SEKARANG!
+				</a>
+			</div>
+		</section>
+
+		<!-- Mengapa Bersama MHU Travel -->
+		<section class="py-10 bg-white text-center">
+			<div class="max-w-7xl mx-auto px-4">
+				<p class="text-[#3569b4] text-lg mb-2">Layanan Kami</p>
+				<h2 class="text-3xl md:text-4xl font-normal text-[#c15b74] mb-10">Mengapa Bersama MHU Travel</h2>
+			</div>
+		</section>
+
+		<!-- Statistics Banner -->
+		<section class="py-12 bg-[#fdebf0] text-center px-4 border-t border-b border-pink-100">
+			<div class="max-w-4xl mx-auto">
+				<h3 class="text-xl font-bold text-gray-800 mb-2">Alhamdulillah, ribuan jamah sudah berangkat bersama MHU.</h3>
+				<p class="text-gray-900 font-bold mb-6">Visi kami memberangkatkan 1 jt jamaah pada tahun 2030, secara bertahap insya Allah tercapai</p>
+				
+				<div class="text-4xl font-bold text-[#c15b74] mb-4">300 + Jama'ah/Bulan</div>
+				<p class="text-sm text-gray-800 mb-8">Alhamdulillah, Lebih dari 1,000 jama'ah berangkat setiap bulan. Paket umroh kami cepat habis!</p>
+				
+				<a href="https://wa.me/6285956129389" class="inline-block bg-[#c15b74] text-white px-6 py-3 rounded text-sm font-bold hover:bg-[#a0455d] transition-colors">
+					KONSULTASI KEBERANGKATAN GRATIS. KLIK DISINI
+				</a>
+			</div>
+		</section>
+
+		<!-- Features Cards -->
+		<section class="py-16 bg-white relative z-10 -mt-8 px-4">
+			<div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+				<div class="bg-white rounded-xl border border-[#c15b74] p-8 text-center shadow-sm">
+					<div class="flex justify-center mb-6">
+						<svg class="w-16 h-16 text-[#c15b74]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+					</div>
+					<h4 class="font-bold text-gray-900 text-lg mb-4">Legalitas dan Kepercayaan Terjamin Penuh</h4>
+					<p class="text-gray-700 text-sm leading-relaxed">
+						MHU Travel resmi berizin PPIU (Penyelenggara Perjalanan Ibadah Umrah), beroperasi di bawah pengawasan ketat Kementerian Agama.
+					</p>
+				</div>
+				<div class="bg-white rounded-xl border border-[#c15b74] p-8 text-center shadow-sm">
+					<div class="flex justify-center mb-6">
+						<svg class="w-16 h-16 text-[#c15b74]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path></svg>
+					</div>
+					<h4 class="font-bold text-gray-900 text-lg mb-4">Program Pembayaran Fleksibel & Syariah Friendly</h4>
+					<p class="text-gray-700 text-sm leading-relaxed">
+						Wujudkan impian umroh Anda tanpa beban biaya di awal melalui inovasi program pembiayaan kami yang fleksibel dan Syariah friendly
+					</p>
+				</div>
+				<div class="bg-white rounded-xl border border-[#c15b74] p-8 text-center shadow-sm">
+					<div class="flex justify-center mb-6">
+						<svg class="w-16 h-16 text-[#c15b74]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
+					</div>
+					<h4 class="font-bold text-gray-900 text-lg mb-4">Paket Lengkap Dan Layanan Aman Nyaman</h4>
+					<p class="text-gray-700 text-sm leading-relaxed">
+						Perjalanan tanpa perlu pusing urus ini itu. Paket umroh MHU travel dirancang komprehensif, untuk keamanan dan kenyamanan ibadah anda
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- 2 Columns: Paket Info & Video -->
+		<section class="py-12 bg-white px-4">
+			<div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 bg-[#fdfafb] rounded-2xl p-8 lg:p-12">
+				<div>
+					<h3 class="text-2xl font-normal text-[#c15b74] mb-8">Paket Ibadah Haji & Umroh MHU travel</h3>
+					<ul class="space-y-6 text-sm text-gray-800">
+						<li class="flex items-start">
+							<svg class="w-5 h-5 text-[#c15b74] mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+							<div>
+								<strong>Bimbingan Ibadah Yang Lengkap Dan Mendalam</strong> - Dari Muthawif Tersertifikasi
+							</div>
+						</li>
+						<li class="flex items-start">
+							<svg class="w-5 h-5 text-[#c15b74] mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+							<div>
+								<strong>Pelayanan Profesional, Sigap, Dan Responsif</strong>
+							</div>
+						</li>
+						<li class="flex items-start">
+							<svg class="w-5 h-5 text-[#c15b74] mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+							<div>
+								<strong>Ilmu Dan Nilai Spiritual Yang Mendalam</strong> - Yang Didapatkan Selama Perjalanan, Melampaui Sekadar Ritual
+							</div>
+						</li>
+						<li class="flex items-start">
+							<svg class="w-5 h-5 text-[#c15b74] mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+							<div>
+								<strong>Suasana Kekeluargaan Dan Kekompakan Rombongan</strong> - Yang Menghangatkan Hati
+							</div>
+						</li>
+						<li class="flex items-start">
+							<svg class="w-5 h-5 text-[#c15b74] mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+							<div>
+								<strong>Fasilitas Dan Akomodasi Prima</strong> - Termasuk Hotel Strategis Dekat Masjidil Haram Dan Nabawi.
+							</div>
+						</li>
+					</ul>
+					
+					<p class="mt-8 text-sm text-gray-800 leading-relaxed">
+						<svg class="w-4 h-4 inline text-[#c15b74]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg> 
+						Kerinduan Anda untuk bersimpuh di Baitullah jangan hanya menjadi impian. Ini saatnya menjawab panggilanNya! Wujudkan tekad suci Anda dalam ibadah umroh penuh keberkahan bersama MHU Travel!
+					</p>
+					
+					<a href="https://wa.me/6285956129389" class="inline-block mt-8 text-sm font-bold text-[#3569b4] underline hover:text-blue-800">
+						KLIK UNTUK KONSULTASI
+					</a>
+				</div>
+				<div class="flex items-center justify-center">
+					<div class="w-full rounded-lg overflow-hidden shadow-lg aspect-[9/16] max-w-sm mx-auto flex items-center justify-center bg-gray-100">
+						<iframe 
+							class="w-full h-full"
+							src="https://www.youtube.com/embed/nptX_9B9JqE?rel=0" 
+							title="YouTube video player" 
+							frameborder="0" 
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+							allowfullscreen>
+						</iframe>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Jadwal Packages -->
+		<section id="paket" class="py-16 bg-white px-4">
+			<div class="max-w-5xl mx-auto">
+				<h2 class="text-3xl font-normal text-[#c15b74] mb-4 text-center md:text-left">Jadwal Umroh PT Manasik Haji Umrah</h2>
+				<h3 class="text-xl font-bold text-[#3569b4] mb-10 text-center md:text-left">Pilihan Paket Umroh Terbaik Kami</h3>
+				
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+					{packages.items.map((pkg) => (
+						<div class="flex flex-col bg-white border border-gray-100 shadow-sm rounded-lg overflow-hidden">
+							<div class="bg-[#c15b74] text-white text-center py-2 px-2 font-bold">
+								{pkg.title}<br/>
+								{pkg.subtitle}
+							</div>
+							<div class="flex-grow flex justify-center items-center bg-gray-50 overflow-hidden">
+								<img src={pkg.image} alt={pkg.alt} class="w-full aspect-[4/5] object-cover cursor-pointer hover:scale-105 transition-transform duration-300 image-trigger" onerror={`this.onerror=null; this.src='${pkg.fallbackImage}';`} />
+							</div>
+						</div>
+					))}
+				</div>
+			</div>
+		</section>
+
+
+		<!-- Gallery Section -->
+		<section class="py-16 bg-white px-4">
+			<div class="max-w-6xl mx-auto mb-12 text-center">
+				<p class="text-[#3569b4] text-lg font-medium mb-2">Galeri Keberangkatan</p>
+				<h2 class="text-3xl md:text-4xl font-normal text-[#c15b74]">Momen Indah di Tanah Suci</h2>
+				<p class="text-gray-600 mt-4">Ikuti perjalanan spiritual jamaah kami melalui video terbaru di YouTube.</p>
+			</div>
+			
+			<!-- YouTube Shorts Embed Grid -->
+			<div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center">
+				<div class="w-full max-w-[400px] aspect-[9/16] rounded-xl overflow-hidden shadow-lg">
+					<iframe 
+						class="w-full h-full"
+						src="https://www.youtube.com/embed/u2hBKzsdL-E?rel=0" 
+						title="YouTube video player" 
+						frameborder="0" 
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+						allowfullscreen>
+					</iframe>
+				</div>
+				<div class="w-full max-w-[400px] aspect-[9/16] rounded-xl overflow-hidden shadow-lg">
+					<iframe 
+						class="w-full h-full"
+						src="https://www.youtube.com/embed/vrPJAC6z6Pc?rel=0" 
+						title="YouTube video player" 
+						frameborder="0" 
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+						allowfullscreen>
+					</iframe>
+				</div>
+				<div class="w-full max-w-[400px] aspect-[9/16] rounded-xl overflow-hidden shadow-lg">
+					<iframe 
+						class="w-full h-full"
+						src="https://www.youtube.com/embed/VFTqXwpmHhk?rel=0" 
+						title="YouTube video player" 
+						frameborder="0" 
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+						allowfullscreen>
+					</iframe>
+				</div>
+			</div>
+			
+			<div class="text-center mt-12">
+				<a href="https://www.youtube.com/@mhutravel" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-white border-2 border-[#c15b74] text-[#c15b74] px-8 py-3 rounded-full font-bold hover:bg-[#c15b74] hover:text-white transition-colors">
+					<svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+					LIHAT YOUTUBE MHU TRAVEL
+				</a>
+			</div>
+				</a>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer class="bg-[#c15b74] text-white pt-16 pb-8">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+					<!-- Company Info -->
+					<div class="col-span-1 md:col-span-2">
+						<div class="bg-white inline-block p-3 rounded-lg mb-6">
+							<img src="https://manasikhajiumrah.net/wp-content/uploads/2025/08/cropped-logo-1-300x86-1-1.png" alt="MHU Travel Logo" class="h-10 md:h-12 w-auto" onerror="this.onerror=null; this.src='https://via.placeholder.com/150x50?text=MHU+Travel';">
+						</div>
+						<p class="text-sm leading-relaxed mb-6 text-pink-50">
+							PT Manasik Haji Umrah (MHU Travel) adalah agen travel perjalanan ibadah Umroh dan Haji khusus yang berizin resmi (PPIU), terpercaya, dan amanah. Kami berkomitmen memberikan pelayanan terbaik demi kenyamanan ibadah Anda di Tanah Suci.
+						</p>
+					</div>
+
+					<!-- Quick Links -->
+					<div>
+						<h4 class="font-bold text-white mb-4 uppercase text-sm tracking-wider">Tautan Cepat</h4>
+						<ul class="space-y-3 text-sm text-pink-100">
+							<li><a href="/" class="hover:text-white transition-colors">Beranda</a></li>
+							<li><a href="#paket" class="hover:text-white transition-colors">Paket Umroh</a></li>
+							<li><a href="/jadwal" class="hover:text-white transition-colors">Jadwal Keberangkatan</a></li>
+							<li><a href="/blog" class="hover:text-white transition-colors">Artikel & Blog</a></li>
+						</ul>
+					</div>
+
+					<!-- Contact Info -->
+					<div>
+						<h4 class="font-bold text-white mb-4 uppercase text-sm tracking-wider">Hubungi Kami</h4>
+						<ul class="space-y-3 text-sm text-pink-100">
+							<li class="flex items-start">
+								<svg class="w-5 h-5 text-pink-200 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+								<span>Kantor Pusat MHU Travel, Indonesia</span>
+							</li>
+							<li class="flex items-start">
+								<svg class="w-5 h-5 text-pink-200 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+								<a href="https://wa.me/6285956129389" class="hover:text-white transition-colors">0859-5612-9389 (WhatsApp)</a>
+							</li>
+							<li class="flex items-start">
+								<svg class="w-5 h-5 text-pink-200 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+								<span>info@manasikhajiumrah.net</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+				
+				<div class="border-t border-pink-400/50 pt-8 text-center text-sm text-pink-100 flex flex-col md:flex-row justify-between items-center gap-4">
+					<p>&copy; 2026 MHU Travel - PT Manasik Haji Umrah. Hak Cipta Dilindungi.</p>
+					<div class="flex space-x-4">
+						<a href="#" class="text-pink-100 hover:text-white"><span class="sr-only">Facebook</span><svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" /></svg></a>
+						<a href="#" class="text-pink-100 hover:text-white"><span class="sr-only">Instagram</span><svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd" /></svg></a>
+						<a href="#" class="text-pink-100 hover:text-white"><span class="sr-only">YouTube</span><svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M19.812 5.418c.861.23 1.538.907 1.768 1.768C21.998 8.746 22 12 22 12s0 3.255-.418 4.814a2.504 2.504 0 0 1-1.768 1.768c-1.56.419-7.814.419-7.814.419s-6.255 0-7.814-.419a2.505 2.505 0 0 1-1.768-1.768C2 15.255 2 12 2 12s0-3.255.417-4.814a2.507 2.507 0 0 1 1.768-1.768C5.744 5 11.998 5 11.998 5s6.255 0 7.814.418ZM15.194 12 10 15V9l5.194 3Z" clip-rule="evenodd" /></svg></a>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<style is:global>
+			@keyframes marquee {
+				0% { transform: translateX(0); }
+				100% { transform: translateX(-50%); }
+			}
+			.animate-marquee {
+				animation: marquee 35s linear infinite;
+				display: flex;
+				width: max-content;
+			}
+			.animate-marquee:hover {
+				animation-play-state: paused;
+			}
+		</style>
+
+		<!-- Full Image Modal -->
+		<div id="imageModal" class="fixed inset-0 z-[100] hidden bg-black/90 flex-col items-center justify-center p-4 opacity-0 transition-opacity duration-300">
+			<button id="closeModal" class="absolute top-4 right-4 text-white text-5xl font-light hover:text-gray-300 transition-colors">&times;</button>
+			<img id="modalImage" src="" class="max-w-full max-h-full rounded-lg shadow-2xl scale-95 transition-transform duration-300 object-contain" alt="Full Image" />
+		</div>
+
+		<script>
+			document.addEventListener("DOMContentLoaded", () => {
+				const modal = document.getElementById('imageModal');
+				const modalImg = document.getElementById('modalImage');
+				const closeModal = document.getElementById('closeModal');
+				const triggers = document.querySelectorAll('.image-trigger');
+
+				triggers.forEach(trigger => {
+					trigger.addEventListener('click', (e) => {
+						const imgEl = e.target as HTMLImageElement;
+						modalImg.src = imgEl.src;
+						modal.classList.remove('hidden');
+						modal.classList.add('flex');
+						// Small delay to allow display:flex to apply before changing opacity
+						setTimeout(() => {
+							modal.classList.remove('opacity-0');
+							modalImg.classList.remove('scale-95');
+							modalImg.classList.add('scale-100');
+						}, 10);
+					});
+				});
+
+				const hideModal = () => {
+					modal.classList.add('opacity-0');
+					modalImg.classList.add('scale-95');
+					modalImg.classList.remove('scale-100');
+					setTimeout(() => {
+						modal.classList.add('hidden');
+						modal.classList.remove('flex');
+						modalImg.src = '';
+					}, 300);
+				};
+
+				closeModal.addEventListener('click', hideModal);
+				modal.addEventListener('click', (e) => {
+					if(e.target === modal) hideModal();
+				});
+				
+				// Close on Escape key
+				document.addEventListener('keydown', (e) => {
+					if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+						hideModal();
+					}
+				});
+			});
+		</script>
+	</body>
+</html>

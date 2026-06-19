@@ -1,0 +1,40 @@
+{
+  "items": [
+    {
+      "tanggal": "27 Juli 2026",
+      "paket": "Umrah Dermawan Plus Thaif",
+      "pesawat": "Lion Air",
+      "durasi": "12 Hari",
+      "sisaSeat": "Sisa 5 Seat",
+      "statusColor": "red",
+      "linkBooking": "https://wa.me/6285956129389"
+    },
+    {
+      "tanggal": "15 Agustus 2026",
+      "paket": "Paket SILVER Umroh Awal Musim",
+      "pesawat": "Saudia Airlines",
+      "durasi": "9 Hari",
+      "sisaSeat": "Tersedia",
+      "statusColor": "green",
+      "linkBooking": "https://wa.me/6285956129389"
+    },
+    {
+      "tanggal": "10 September 2026",
+      "paket": "Paket GOLD Plus Turki",
+      "pesawat": "Turkish Airlines",
+      "durasi": "12 Hari",
+      "sisaSeat": "Sisa 12 Seat",
+      "statusColor": "yellow",
+      "linkBooking": "https://wa.me/6285956129389"
+    },
+    {
+      "tanggal": "25 Oktober 2026",
+      "paket": "Paket Umroh Spesial Maulid",
+      "pesawat": "Garuda Indonesia",
+      "durasi": "9 Hari",
+      "sisaSeat": "Tersedia",
+      "statusColor": "green",
+      "linkBooking": "https://wa.me/6285956129389"
+    }
+  ]
+}

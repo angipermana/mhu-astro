@@ -1,0 +1,30 @@
+{
+  "items": [
+    {
+      "title": "Paket SILVER MHU Travel",
+      "subtitle": "Umroh Awal Musim 2026",
+      "image": "/images/packages/items/0/image.jpeg",
+      "alt": "Paket Silver"
+    },
+    {
+      "title": "Paket SILVER MHU Travel",
+      "subtitle": "Umroh Awal Musim 2026",
+      "image": "/images/packages/items/1/image.jpeg"
+    },
+    {
+      "title": "Paket SILVER MHU Travel",
+      "subtitle": "Umroh Awal Musim 2026",
+      "image": "/images/packages/items/2/image.jpeg"
+    },
+    {
+      "title": "Paket SILVER MHU Travel",
+      "subtitle": "Umroh Awal Musim 2026",
+      "image": "/images/packages/items/3/image.jpeg"
+    },
+    {
+      "title": "Paket GOLD Travel MHU",
+      "subtitle": "Umroh Awal Musim 2026",
+      "image": "/images/packages/items/4/image.jpeg"
+    }
+  ]
+}

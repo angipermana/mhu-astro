@@ -1,0 +1,24 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+	--font-sans: 'Atkinson', sans-serif;
+}
+
+:root {
+	--accent: #284f9b;
+	--accent-dark: #1e3a8a;
+	--black: 15, 18, 25;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: var(--font-sans);
+	margin: 0;
+	padding: 0;
+	background-color: #ffffff;
+	color: #333333;
+}
