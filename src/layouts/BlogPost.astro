@@ -23,13 +23,13 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 				{/* Article Header */}
 				<header class="bg-white border-b border-gray-200 pt-16 pb-12 mb-10">
 					<div class="max-w-4xl mx-auto px-6 text-center">
-						<div class="text-sm font-semibold text-[#b1345b] tracking-wider uppercase mb-4">
+						<div class="text-base font-semibold text-[#b1345b] tracking-wider uppercase mb-4">
 							Blog & Panduan
 						</div>
 						<h1 class="text-3xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-6">
 							{title}
 						</h1>
-						<div class="flex items-center justify-center gap-4 text-gray-500 text-sm">
+						<div class="flex items-center justify-center gap-4 text-gray-500 text-base">
 							<div class="flex items-center gap-1.5">
 								<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
 								<FormattedDate date={pubDate} />
@@ -61,7 +61,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 					)}
 					
 					{/* Article Content */}
-					<div class="prose prose-lg prose-pink max-w-none prose-headings:font-bold prose-headings:text-gray-900 prose-p:text-gray-700 prose-a:text-[#b1345b] prose-a:no-underline hover:prose-a:underline prose-img:rounded-xl prose-img:shadow-md bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-gray-100">
+					<div class="prose prose-xl prose-pink max-w-none prose-headings:font-bold prose-headings:text-gray-900 prose-p:text-gray-700 prose-p:leading-loose prose-a:text-[#b1345b] prose-a:no-underline hover:prose-a:underline prose-img:rounded-xl prose-img:shadow-md bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-gray-100">
 						<slot />
 					</div>
 				</div>

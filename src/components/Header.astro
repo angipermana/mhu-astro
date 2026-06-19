@@ -11,7 +11,7 @@ import HeaderLink from './HeaderLink.astro';
 				</a>
 			</div>
 			
-			{/* Desktop Menu */}
+			<!-- Desktop Menu -->
 			<nav class="hidden md:flex space-x-8 items-center">
 				<a href="/" class="text-[#c15b74] font-medium hover:text-[#a0455d] transition-colors">Beranda</a>
 				<div class="relative group">
@@ -26,10 +26,10 @@ import HeaderLink from './HeaderLink.astro';
 				</a>
 			</nav>
 
-			{/* Mobile Menu Button (Hamburger) */}
-			<div class="md:hidden flex items-center">
-				<button id="mobile-menu-button" class="text-[#c15b74] hover:text-[#a0455d] focus:outline-none p-2">
-					<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+			<!-- Mobile Menu Button (Hamburger) -->
+			<div class="md:hidden flex items-center ml-auto">
+				<button id="mobile-menu-button" class="text-[#c15b74] hover:text-[#a0455d] focus:outline-none p-2 border border-[#c15b74] rounded-md flex items-center justify-center">
+					<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
 				</button>
 			</div>
 		</div>
@@ -51,13 +51,21 @@ import HeaderLink from './HeaderLink.astro';
 </header>
 
 <script>
-	// Toggle mobile menu
-	const mobileMenuButton = document.getElementById('mobile-menu-button');
-	const mobileMenu = document.getElementById('mobile-menu');
+	function setupMobileMenu() {
+		const mobileMenuButton = document.getElementById('mobile-menu-button');
+		const mobileMenu = document.getElementById('mobile-menu');
 
-	if (mobileMenuButton && mobileMenu) {
-		mobileMenuButton.addEventListener('click', () => {
-			mobileMenu.classList.toggle('hidden');
-		});
+		if (mobileMenuButton && mobileMenu) {
+			// Remove existing listeners by cloning (simple way to ensure no duplicates)
+			const newButton = mobileMenuButton.cloneNode(true);
+			mobileMenuButton.parentNode.replaceChild(newButton, mobileMenuButton);
+			
+			newButton.addEventListener('click', () => {
+				mobileMenu.classList.toggle('hidden');
+			});
+		}
 	}
+
+	// Gunakan event dari Astro View Transitions yang berjalan setiap kali halaman selesai dimuat (pertama kali atau navigasi)
+	document.addEventListener('astro:page-load', setupMobileMenu);
 </script>
