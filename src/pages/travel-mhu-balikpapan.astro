@@ -4,13 +4,12 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import packages from '../data/packages.json';
-import Chatbot from '../components/Chatbot.tsx';
 ---
 
 <!doctype html>
 <html lang="id">
 	<head>
-		<BaseHead title="MHU Travel Umroh 2026 | Jadwal Lengkap & Harga Terbaik" description="Travel Umroh Resmi MHU - Akreditasi A Jadwal Umroh 2026 lengkap + harga mulai 20 jutaan." />
+		<BaseHead title="Travel Umroh MHU Balikpapan Resmi 2026 | Jadwal & Biaya Terlengkap" description="Cari Travel Umroh terpercaya di Balikpapan? MHU Travel Balikpapan hadir dengan akreditasi A, keberangkatan pasti, dan layanan terbaik." />
 	</head>
 	<body class="font-sans text-gray-800 antialiased bg-white">
 		<!-- Header / Navbar -->
@@ -20,17 +19,16 @@ import Chatbot from '../components/Chatbot.tsx';
 		<section class="py-16 bg-[#f7f9fb] text-center px-4">
 			<div class="max-w-4xl mx-auto">
 				<h1 class="text-3xl md:text-5xl font-bold text-[#c15b74] mb-4 leading-tight">
-					Travel Umroh Resmi & Terpercaya MHU Travel
+					Travel Umroh Resmi & Terpercaya MHU Travel Balikpapan
 				</h1>
 				<h2 class="text-xl md:text-2xl font-semibold text-gray-900 mb-6 leading-snug">
 					Agen Travel Umroh Resmi Terpercaya Akreditasi A<br/>
-					PT Manasik Haji Umrah
+					Melayani Jamaah Kota Balikpapan & Kalimantan Timur
 				</h2>
 				<p class="text-lg md:text-xl text-gray-700 leading-relaxed mb-8">
-					Setiap langkah menuju Tanah Suci adalah panggilan suci. Di tengah kerinduan mendalam akan<br class="hidden md:block"/>
-					Baitullah, MHU Travel (PT Manasik Haji Umrah) hadir sebagai mitra terpercaya Anda.<br class="hidden md:block"/>
+					Warga Balikpapan yang berniat menuju Tanah Suci? MHU Travel hadir lebih dekat sebagai mitra terpercaya Anda.<br class="hidden md:block"/>
 					Dengan pengalaman lebih dari 10 tahun di bidang haji dan umrah, kami siap mewujudkan<br class="hidden md:block"/>
-					perjalanan spiritual Anda menjadi kenyataan yang nyaman, aman, dan penuh makna
+					perjalanan spiritual Anda dari Balikpapan menjadi kenyataan yang nyaman, aman, dan penuh makna.
 				</p>
 				<a href="#paket" class="inline-block bg-[#c15b74] text-white px-8 py-4 rounded-md font-bold text-base md:text-lg tracking-wider hover:bg-[#a0455d] transition-colors mb-10">
 					<svg class="w-4 h-4 inline-block mr-2 -mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9.5a2.5 2.5 0 00-2.5-2.5H15"></path></svg>
@@ -46,9 +44,9 @@ import Chatbot from '../components/Chatbot.tsx';
 		<!-- Pink Box Section -->
 		<section class="py-12 bg-white px-4">
 			<div class="max-w-5xl mx-auto bg-[#fdebf0] rounded-lg p-8 md:p-12 text-center">
-				<h3 class="text-2xl md:text-3xl font-bold text-[#c15b74] mb-6">PT Manasik Haji Umrah (MHU Travel)</h3>
+				<h3 class="text-2xl md:text-3xl font-bold text-[#c15b74] mb-6">Keunggulan MHU Travel Cabang Balikpapan</h3>
 				<p class="text-gray-800 text-lg md:text-xl mb-8 max-w-4xl mx-auto leading-relaxed">
-					Kami Memahami Bahwa Ibadah Umroh Adalah Perjalanan Hati Yang Membutuhkan Ketenangan Dan Kepercayaan Penuh. <strong>MHU Travel</strong> Berkomitmen Untuk Menghadirkan Pengalaman Spiritual Terbaik Dengan Berbagai Keunggulan Yang Menjamin Kedamaian Perjalanan Anda
+					Kami Memahami Bahwa Ibadah Umroh Adalah Perjalanan Hati Yang Membutuhkan Ketenangan Dan Kepercayaan Penuh. <strong>MHU Travel Balikpapan</strong> Berkomitmen Untuk Menghadirkan Pengalaman Spiritual Terbaik Dengan Berbagai Keunggulan Yang Menjamin Kedamaian Perjalanan Anda dari Kalimantan Timur.
 				</p>
 				
 				<ul class="text-left space-y-4 max-w-3xl mx-auto mb-8 text-gray-800 text-base md:text-lg">
@@ -91,8 +89,8 @@ import Chatbot from '../components/Chatbot.tsx';
 		<!-- Mengapa Bersama MHU Travel -->
 		<section class="py-10 bg-white text-center">
 			<div class="max-w-7xl mx-auto px-4">
-				<p class="text-gray-900 text-xl font-semibold mb-2">Layanan Kami</p>
-				<h2 class="text-3xl md:text-4xl font-bold text-[#c15b74] mb-10">Mengapa Bersama MHU Travel</h2>
+				<p class="text-gray-900 text-xl font-semibold mb-2">Layanan Kami di Balikpapan</p>
+				<h2 class="text-3xl md:text-4xl font-bold text-[#c15b74] mb-10">Mengapa Mendaftar di MHU Travel Balikpapan</h2>
 			</div>
 		</section>
 
@@ -444,7 +442,7 @@ import Chatbot from '../components/Chatbot.tsx';
 						modalImg.src = '';
 					}, 300);
 				};
-
+				
 				closeModal.addEventListener('click', hideModal);
 				modal.addEventListener('click', (e) => {
 					if(e.target === modal) hideModal();
@@ -458,6 +456,5 @@ import Chatbot from '../components/Chatbot.tsx';
 				});
 			});
 		</script>
-		<Chatbot client:load />
 	</body>
 </html>

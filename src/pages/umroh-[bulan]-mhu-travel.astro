@@ -4,13 +4,25 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import packages from '../data/packages.json';
-import Chatbot from '../components/Chatbot.tsx';
+
+export function getStaticPaths() {
+	const months = [
+		'januari', 'februari', 'maret', 'april', 'mei', 'juni',
+		'juli', 'agustus', 'september', 'oktober', 'november', 'desember'
+	];
+	return months.map((bulan) => ({
+		params: { bulan },
+	}));
+}
+
+const { bulan } = Astro.params;
+const capitalizedBulan = bulan.charAt(0).toUpperCase() + bulan.slice(1);
 ---
 
 <!doctype html>
 <html lang="id">
 	<head>
-		<BaseHead title="MHU Travel Umroh 2026 | Jadwal Lengkap & Harga Terbaik" description="Travel Umroh Resmi MHU - Akreditasi A Jadwal Umroh 2026 lengkap + harga mulai 20 jutaan." />
+		<BaseHead title={`Umroh ${capitalizedBulan} 2026 PT MHU Travel`} description={`Travel Umroh Resmi MHU - Akreditasi A. Jadwal Paket Umroh ${capitalizedBulan} 2026 lengkap + harga mulai 20 jutaan.`} />
 	</head>
 	<body class="font-sans text-gray-800 antialiased bg-white">
 		<!-- Header / Navbar -->
@@ -20,7 +32,7 @@ import Chatbot from '../components/Chatbot.tsx';
 		<section class="py-16 bg-[#f7f9fb] text-center px-4">
 			<div class="max-w-4xl mx-auto">
 				<h1 class="text-3xl md:text-5xl font-bold text-[#c15b74] mb-4 leading-tight">
-					Travel Umroh Resmi & Terpercaya MHU Travel
+					Paket Umroh {capitalizedBulan} 2026 Bersama MHU Travel
 				</h1>
 				<h2 class="text-xl md:text-2xl font-semibold text-gray-900 mb-6 leading-snug">
 					Agen Travel Umroh Resmi Terpercaya Akreditasi A<br/>
@@ -209,7 +221,7 @@ import Chatbot from '../components/Chatbot.tsx';
 		<!-- Jadwal Packages -->
 		<section id="paket" class="py-16 bg-white px-4">
 			<div class="max-w-5xl mx-auto">
-				<h2 class="text-3xl md:text-4xl font-bold text-[#c15b74] mb-4 text-center md:text-left">Jadwal Umroh PT Manasik Haji Umrah</h2>
+				<h2 class="text-3xl md:text-4xl font-bold text-[#c15b74] mb-4 text-center md:text-left">Jadwal Umroh {capitalizedBulan} 2026</h2>
 				<h3 class="text-2xl font-semibold text-gray-900 mb-10 text-center md:text-left">Pilihan Paket Umroh Terbaik Kami</h3>
 				
 				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
@@ -458,6 +470,5 @@ import Chatbot from '../components/Chatbot.tsx';
 				});
 			});
 		</script>
-		<Chatbot client:load />
 	</body>
 </html>

@@ -15,8 +15,11 @@ import node from '@astrojs/node';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://example.com',
+  site: 'https://manasikhajiumrah.net',
   integrations: [mdx(), sitemap(), keystatic(), react(), markdoc()],
+  redirects: {
+    '/admin': '/keystatic',
+  },
 
   fonts: [
       {

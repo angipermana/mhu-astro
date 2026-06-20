@@ -55,3 +55,19 @@ const { title, description, image = FallbackImage } = Astro.props;
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={new URL(image.src, Astro.url)} />
+
+<!-- JSON-LD Structured Data -->
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "TravelAgency",
+  "name": "MHU Travel - PT Manasik Haji Umrah",
+  "image": "https://manasikhajiumrah.net/wp-content/uploads/2025/08/cropped-logo-1-300x86-1-1.png",
+  "@id": "https://manasikhajiumrah.net",
+  "url": "https://manasikhajiumrah.net",
+  "telephone": "+6285956129389",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "ID"
+  },
+  "description": "Travel Umroh Resmi MHU - Akreditasi A. Melayani perjalanan ibadah Umroh dan Haji khusus."
+})} />

@@ -2,7 +2,8 @@ import { config, fields, singleton, collection } from '@keystatic/core';
 
 export default config({
   storage: {
-    kind: 'local',
+    kind: process.env.NODE_ENV === 'production' ? 'github' : 'local',
+    repo: 'angipermana/mhu-astro',
   },
   collections: {
     blog: collection({
@@ -92,6 +93,17 @@ export default config({
           }
         )
       }
+    }),
+    chatbotKnowledge: singleton({
+      label: 'Pengetahuan Chatbot',
+      path: 'src/data/chatbot/source',
+      format: { contentField: 'content' },
+      schema: {
+        content: fields.mdx({
+          label: 'Data / Instruksi Chatbot',
+          description: 'Tuliskan semua informasi penting perusahaan, paket, dan FAQ di sini. AI Chatbot akan menggunakan data ini sebagai sumber jawaban.',
+        }),
+      },
     })
   }
 });
