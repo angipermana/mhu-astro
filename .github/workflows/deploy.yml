@@ -29,7 +29,7 @@ jobs:
         uses: easingthemes/ssh-deploy@main
         env:
           SSH_PRIVATE_KEY: ${{ secrets.HOSTINGER_SSH_KEY }}
-          ARGS: "-rlgoDzvc -i --delete"
+          ARGS: "-rlgoDzvc -i"
           SOURCE: "dist/ server.js package.json package-lock.json"
           REMOTE_HOST: ${{ secrets.HOSTINGER_HOST }}
           REMOTE_PORT: ${{ secrets.HOSTINGER_PORT }}
