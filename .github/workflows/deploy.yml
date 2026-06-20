@@ -1,0 +1,50 @@
+name: Deploy to Hostinger
+
+on:
+  push:
+    branches:
+      - main # Akan berjalan setiap kali ada perubahan di branch main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22' # Sesuai dengan versi Node.js yang Anda gunakan
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Build Project
+        run: npm run build
+
+      - name: Deploy to Hostinger
+        uses: easingthemes/ssh-deploy@main
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.HOSTINGER_SSH_KEY }}
+          ARGS: "-rlgoDzvc -i --delete"
+          SOURCE: "dist/ server.js package.json package-lock.json"
+          REMOTE_HOST: ${{ secrets.HOSTINGER_HOST }}
+          REMOTE_PORT: ${{ secrets.HOSTINGER_PORT }}
+          REMOTE_USER: ${{ secrets.HOSTINGER_USERNAME }}
+          TARGET: ${{ secrets.HOSTINGER_TARGET_DIR }}
+
+      - name: Restart Node.js App on Hostinger
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.HOSTINGER_HOST }}
+          username: ${{ secrets.HOSTINGER_USERNAME }}
+          key: ${{ secrets.HOSTINGER_SSH_KEY }}
+          port: ${{ secrets.HOSTINGER_PORT }}
+          script: |
+            cd ${{ secrets.HOSTINGER_TARGET_DIR }}
+            npm install --production
+            mkdir -p tmp
+            touch tmp/restart.txt
