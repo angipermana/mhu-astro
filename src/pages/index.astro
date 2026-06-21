@@ -223,7 +223,7 @@ import Chatbot from '../components/Chatbot.tsx';
 								{pkg.subtitle}
 							</div>
 							<div class="flex-grow flex justify-center items-center bg-gray-50 overflow-hidden">
-								<img src={pkg.image} alt={pkg.alt} class="w-full aspect-[4/5] object-cover cursor-pointer hover:scale-105 transition-transform duration-300 image-trigger" onerror={`this.onerror=null; this.src='${pkg.fallbackImage}';`} />
+								<img src={`${pkg.image}?v=${Date.now()}`} alt={pkg.alt} class="w-full aspect-[4/5] object-cover cursor-pointer hover:scale-105 transition-transform duration-300 image-trigger" onerror={`this.onerror=null; this.src='${pkg.fallbackImage}?v=${Date.now()}';`} />
 							</div>
 						</div>
 					))}

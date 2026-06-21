@@ -16,6 +16,7 @@ import node from '@astrojs/node';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://manasikhajiumrah.net',
+  output: 'hybrid',
   integrations: [mdx(), sitemap(), keystatic(), react(), markdoc()],
   redirects: {
     '/admin': '/keystatic',

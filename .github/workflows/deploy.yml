@@ -32,6 +32,14 @@ jobs:
           cp server.js deploy_package/
           cp package.json deploy_package/
           cp package-lock.json deploy_package/
+          
+          # Create .env file for production
+          echo "KEYSTATIC_GITHUB_CLIENT_ID=${{ secrets.KEYSTATIC_GITHUB_CLIENT_ID }}" >> deploy_package/.env
+          echo "KEYSTATIC_GITHUB_CLIENT_SECRET=${{ secrets.KEYSTATIC_GITHUB_CLIENT_SECRET }}" >> deploy_package/.env
+          echo "KEYSTATIC_SECRET=${{ secrets.KEYSTATIC_SECRET }}" >> deploy_package/.env
+          echo "PUBLIC_KEYSTATIC_GITHUB_APP_SLUG=${{ secrets.PUBLIC_KEYSTATIC_GITHUB_APP_SLUG }}" >> deploy_package/.env
+          echo "OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }}" >> deploy_package/.env
+          
           npm prune --production
           cp -r node_modules deploy_package/
 
