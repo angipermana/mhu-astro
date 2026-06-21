@@ -32,6 +32,8 @@ jobs:
           cp server.js deploy_package/
           cp package.json deploy_package/
           cp package-lock.json deploy_package/
+          npm prune --production
+          cp -r node_modules deploy_package/
 
       - name: Deploy to Hostinger
         uses: easingthemes/ssh-deploy@main
@@ -53,6 +55,5 @@ jobs:
           port: ${{ secrets.HOSTINGER_PORT }}
           script: |
             cd ${{ secrets.HOSTINGER_TARGET_DIR }}
-            npm install --production
             mkdir -p tmp
             touch tmp/restart.txt
