@@ -1,6 +1,7 @@
 ---
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
+import Chatbot from '../components/Chatbot.tsx';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import packages from '../data/packages.json';
@@ -473,5 +474,6 @@ const capitalizedBulan = bulan.charAt(0).toUpperCase() + bulan.slice(1);
 				});
 			});
 		</script>
+		<Chatbot client:load />
 	</body>
 </html>
