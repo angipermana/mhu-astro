@@ -1,0 +1,5 @@
+# DO NOT REMOVE. ALERTS ORIGINATING FROM THIS FILE
+# passenger_nodejs
+PassengerAppType node
+PassengerStartupFile server.js
+PassengerAppRoot /home/u557622134/domains/manasikhajiumrah.net/public_html
