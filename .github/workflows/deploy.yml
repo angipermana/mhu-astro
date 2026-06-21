@@ -25,12 +25,20 @@ jobs:
       - name: Build Project
         run: npm run build
 
+      - name: Prepare Deployment Package
+        run: |
+          mkdir deploy_package
+          cp -r dist deploy_package/
+          cp server.js deploy_package/
+          cp package.json deploy_package/
+          cp package-lock.json deploy_package/
+
       - name: Deploy to Hostinger
         uses: easingthemes/ssh-deploy@main
         env:
           SSH_PRIVATE_KEY: ${{ secrets.HOSTINGER_SSH_KEY }}
           ARGS: "-rlgoDzvc -i"
-          SOURCE: "dist/ server.js package.json package-lock.json"
+          SOURCE: "deploy_package/"
           REMOTE_HOST: ${{ secrets.HOSTINGER_HOST }}
           REMOTE_PORT: ${{ secrets.HOSTINGER_PORT }}
           REMOTE_USER: ${{ secrets.HOSTINGER_USERNAME }}
