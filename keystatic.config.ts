@@ -9,7 +9,7 @@ export default config({
     blog: collection({
       label: 'Blog Posts',
       slugField: 'title',
-      path: 'src/content/blog/*',
+      path: 'src/content/blog/*.mdx',
       previewUrl: '/blog/{slug}',
       format: { contentField: 'content' },
       schema: {
